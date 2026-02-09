@@ -24,7 +24,7 @@ pub struct Target {
 pub trait TargetRead<R: AsyncBufRead> {
     async fn decode(&mut self) -> Result<Arc<Target>>;
 }
-
+/lazy (r)
 #[derive(Default, Debug)]
 pub enum Targets<R: AsyncBufRead + Send> {
     #[default]
